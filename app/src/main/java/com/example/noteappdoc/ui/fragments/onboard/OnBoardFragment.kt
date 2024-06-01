@@ -12,6 +12,7 @@ import com.example.noteappdoc.ui.adapters.OnBoardViewPagerAdapter
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 
 class OnBoardFragment : Fragment() {
+
     private var _binding: FragmentOnBoardBinding? = null
     private val binding: FragmentOnBoardBinding get() = _binding!!
     override fun onCreateView(
