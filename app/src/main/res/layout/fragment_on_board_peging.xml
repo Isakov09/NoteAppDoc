@@ -32,11 +32,12 @@
         android:textStyle="bold"
         tools:text="Очень удобный функционал" />
 
-    <TextView
-        android:id="@+id/start"
-        android:layout_width="154dp"
-        android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="226dp"
+        android:layout_height="60dp"
         android:layout_marginTop="50dp"
+        android:backgroundTint="@color/black"
         android:gravity="center"
         android:text="@string/ha"
         android:textColor="@color/gray"

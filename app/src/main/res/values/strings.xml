@@ -5,4 +5,10 @@
     <string name="gb">Очень удобный функционал</string>
     <string name="skip">Пропустить</string>
     <string name="ha">Начать работу</string>
+    <string name="poisk">Поиск заметок</string>
+    <string name="plus">+</string>
+    <string name="note">Заметки</string>
+    <string name="tiltle">tiltle</string>
+    <string name="title">title</string>
+    <string name="_16_n_18_13">16 января \n 18:13</string>
 </resources>
