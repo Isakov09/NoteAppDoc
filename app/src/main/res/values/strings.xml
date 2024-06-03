@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">NoteAppDoc</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="gb">Очень удобный функционал</string>
+    <string name="skip">Пропустить</string>
+    <string name="ha">Начать работу</string>
 </resources>
