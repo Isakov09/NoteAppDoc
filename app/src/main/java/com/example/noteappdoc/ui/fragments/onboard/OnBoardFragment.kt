@@ -15,6 +15,7 @@ class OnBoardFragment : Fragment() {
 
     private var _binding: FragmentOnBoardBinding? = null
     private val binding: FragmentOnBoardBinding get() = _binding!!
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
