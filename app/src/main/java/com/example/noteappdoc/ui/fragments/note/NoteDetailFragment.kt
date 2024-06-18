@@ -28,8 +28,8 @@ class NoteDetailFragment : Fragment() {
     }
 
     private fun setupListeners() {
-        binding.btnAddText.setOnClickListener {
-            val et = binding.etAdd.text.toString()
+        binding.buttonOne.setOnClickListener {
+            val et = binding.textEd     .text.toString()
 
             setBackStackData("key", et, true)
         }
