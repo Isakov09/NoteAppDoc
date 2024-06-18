@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.noteappdoc.R
 import com.example.noteappdoc.databinding.FragmentNoteDetailBinding
-import com.example.noteappdoc.ui.fragments.extension.setBackStackData
+import com.example.noteappdoc.extensions.setBackStackData
 
 
 class NoteDetailFragment : Fragment() {
