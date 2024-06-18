@@ -2,8 +2,6 @@ package com.example.noteappdoc.utils
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.example.noteappdoc.ui.fragments.models.NoteModel
-import java.util.ArrayList
     class PreferenceHelper() {
         private lateinit var sharedPreference: SharedPreferences
 

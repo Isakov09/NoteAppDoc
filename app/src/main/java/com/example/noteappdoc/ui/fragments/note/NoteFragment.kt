@@ -8,11 +8,10 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.noteappdoc.R
+import com.example.noteappdoc.data.models.NoteModels
 import com.example.noteappdoc.databinding.FragmentNoteBinding
+import com.example.noteappdoc.extensions.getBackStackData
 import com.example.noteappdoc.ui.adapters.NoteAdapter
-import com.example.noteappdoc.ui.fragments.extension.getBackStackData
-import com.example.noteappdoc.ui.fragments.models.NoteModel
-import com.example.noteappdoc.utils.PreferenceHelper
 
 class NoteFragment : Fragment() {
 
@@ -21,7 +20,7 @@ class NoteFragment : Fragment() {
     private val binding: FragmentNoteBinding get() = _binding!!
 
     private val noteAdapter = NoteAdapter()
-    private val list : ArrayList<NoteModel> = ArrayList()
+    private val list : ArrayList<NoteModels> = ArrayList()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -61,7 +60,7 @@ class NoteFragment : Fragment() {
 
     private fun getData() {
         getBackStackData<String>("key"){ data->
-            val noteModels = NoteModel(data)
+            val noteModels = NoteModels(data)
             list.add(noteModels)
             noteAdapter.submitList(list)
         }
