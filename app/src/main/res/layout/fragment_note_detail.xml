@@ -1,37 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/black"
     android:orientation="vertical"
     android:paddingHorizontal="16dp"
     tools:context=".ui.fragments.note.NoteDetailFragment">
 
 
-    <EditText
-        android:id="@+id/et_add"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:textColor="@color/white"
-        android:backgroundTint="@color/white"
-        android:hint="Начните ввод"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/et_title"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/arrow_left"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="18dp"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/arrow" />
+            <TextView
+                android:id="@+id/text_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="18dp"
+                android:text="30 Мая"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_two"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="18dp"
+                android:text="21:40"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/text_ed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Введите"
+            android:padding="22dp"
+            android:textColorHint="@color/gray"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/text_ed_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Сделать"
+            android:padding="22dp"
+            android:textColorHint="@color/gray"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:textColor="@color/white"
-        android:backgroundTint="@color/white"
-        android:hint="Начните ввод"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center">
 
-    <Button
-        android:id="@+id/btn_add_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:backgroundTint="@color/orange"
-        android:layout_marginTop="20dp"
-        android:text="Добавить" />
 
-</LinearLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_one"
+            android:layout_width="86dp"
+            android:layout_height="56dp"
+            android:layout_gravity="bottom"
+            android:layout_margin="15dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="34dp"
+            android:backgroundTint="#0E0C0C"
+            app:cornerRadius="16dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_two"
+            android:layout_width="86dp"
+            android:layout_height="56dp"
+            android:layout_gravity="bottom"
+            android:layout_margin="15dp"
+            android:layout_marginBottom="34dp"
+            android:backgroundTint="#EBE4C9"
+            app:cornerRadius="16dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_thri"
+            android:layout_width="86dp"
+            android:layout_height="56dp"
+            android:layout_gravity="bottom"
+            android:layout_margin="15dp"
+            android:layout_marginBottom="34dp"
+            android:backgroundTint="#571818"
+            app:cornerRadius="16dp" />
+
+    </LinearLayout>
+
+</FrameLayout>

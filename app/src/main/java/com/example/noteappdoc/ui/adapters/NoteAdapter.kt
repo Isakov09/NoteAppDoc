@@ -5,12 +5,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.noteappdoc.data.models.NoteModels
 import com.example.noteappdoc.databinding.NoteItemBinding
-import com.example.noteappdoc.ui.fragments.models.NoteModel
 
-class NoteAdapter : ListAdapter<NoteModel, NoteAdapter.ViewHolder>(DiffCallback()) {
+class NoteAdapter : ListAdapter<NoteModels, NoteAdapter.ViewHolder>(DiffCallback()) {
     class ViewHolder(private val binding: NoteItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: NoteModel) {
+        fun bind(item: NoteModels) {
             binding.tvNote.text = item.title
         }
     }
@@ -24,12 +24,12 @@ class NoteAdapter : ListAdapter<NoteModel, NoteAdapter.ViewHolder>(DiffCallback(
         holder.bind(getItem(position))
     }
 
-    class DiffCallback : DiffUtil.ItemCallback<NoteModel>() {
-        override fun areItemsTheSame(oldItem: NoteModel, newItem: NoteModel): Boolean {
+    class DiffCallback : DiffUtil.ItemCallback<NoteModels>() {
+        override fun areItemsTheSame(oldItem: NoteModels, newItem: NoteModels): Boolean {
             return oldItem == newItem
         }
 
-        override fun areContentsTheSame(oldItem: NoteModel, newItem: NoteModel): Boolean {
+        override fun areContentsTheSame(oldItem: NoteModels, newItem: NoteModels): Boolean {
             return oldItem.title == newItem.title
         }
     }
