@@ -1,4 +1,4 @@
-package com.example.noteappdoc.ui
+package com.example.noteappdoc
 
 import android.app.Application
 

@@ -60,4 +60,5 @@ dependencies {
 
     //Dots Indicator
     implementation ("com.tbuonomo:dotsindicator:4.3")
+
 }
