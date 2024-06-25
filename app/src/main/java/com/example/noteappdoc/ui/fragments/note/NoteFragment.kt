@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.noteappdoc.App
 import com.example.noteappdoc.R
 import com.example.noteappdoc.data.models.NoteModels
 import com.example.noteappdoc.databinding.FragmentNoteBinding
@@ -20,7 +21,7 @@ class NoteFragment : Fragment() {
     private val binding: FragmentNoteBinding get() = _binding!!
 
     private val noteAdapter = NoteAdapter()
-    private val list : ArrayList<NoteModels> = ArrayList()
+    private val list: ArrayList<NoteModels> = ArrayList()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -59,12 +60,11 @@ class NoteFragment : Fragment() {
     }
 
     private fun getData() {
-        getBackStackData<String>("key"){ data->
-            val noteModels = NoteModels(data)
-            list.add(noteModels)
-            noteAdapter.submitList(list)
+        App().getInstance()?.noteDao()?.getAll()?.observe(viewLifecycleOwner) {
+            noteAdapter.submitList(it)
         }
     }
+
     override fun onDestroy() {
         super.onDestroy()
         _binding = null

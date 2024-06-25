@@ -2,7 +2,7 @@ package com.example.noteappdoc.utils
 
 import android.content.Context
 import android.content.SharedPreferences
-    class PreferenceHelper() {
+   open class PreferenceHelper() {
         private lateinit var sharedPreference: SharedPreferences
 
         fun unit(context: Context){

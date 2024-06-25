@@ -12,6 +12,7 @@ class NoteAdapter : ListAdapter<NoteModels, NoteAdapter.ViewHolder>(DiffCallback
     class ViewHolder(private val binding: NoteItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: NoteModels) {
             binding.tvNote.text = item.title
+            binding.tvTitleNote.text = item.description
         }
     }
 
@@ -30,7 +31,7 @@ class NoteAdapter : ListAdapter<NoteModels, NoteAdapter.ViewHolder>(DiffCallback
         }
 
         override fun areContentsTheSame(oldItem: NoteModels, newItem: NoteModels): Boolean {
-            return oldItem.title == newItem.title
+            return oldItem.id == newItem.id
         }
     }
 }

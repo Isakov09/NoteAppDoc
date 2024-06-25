@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.noteappdoc.R
+import androidx.navigation.fragment.findNavController
+import com.example.noteappdoc.App
+import com.example.noteappdoc.data.models.NoteModels
 import com.example.noteappdoc.databinding.FragmentNoteDetailBinding
 import com.example.noteappdoc.extensions.setBackStackData
 
@@ -28,10 +30,12 @@ class NoteDetailFragment : Fragment() {
     }
 
     private fun setupListeners() {
-        binding.btnAddReed.setOnClickListener {
-            val et = binding.etAdd.text.toString()
+        binding.btnAddBlack.setOnClickListener {
+            val etTittle = binding.etAdd.text.toString()
+            val etdescription = binding.etTitle.text.toString()
+            App().getInstance()?.noteDao()?.insertNote(NoteModels(etTittle,etdescription))
+            findNavController().navigateUp()
 
-            setBackStackData("key", et, true)
         }
     }
 

@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -33,7 +34,7 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    buildFeatures{
+    buildFeatures {
         viewBinding = true
     }
 }
@@ -56,9 +57,14 @@ dependencies {
 
     //Lottie animasion
     val lottieVersion = "4.2.0"
-    implementation ("com.airbnb.android:lottie:$lottieVersion")
+    implementation("com.airbnb.android:lottie:$lottieVersion")
 
     //Dots Indicator
-    implementation ("com.tbuonomo:dotsindicator:4.3")
+    implementation("com.tbuonomo:dotsindicator:4.3")
+
+    //Room
+    val roomVersion = "2.6.1"
+    implementation("androidx.room:room-ktx:$roomVersion")
+    ksp ("androidx.room:room-compiler:$roomVersion")
 
 }
