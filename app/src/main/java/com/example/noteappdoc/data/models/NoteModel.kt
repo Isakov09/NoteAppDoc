@@ -9,4 +9,4 @@ data class NoteModels(
     val title: String,
     val description: String,
     @PrimaryKey(autoGenerate = true)
-    val id: Int = 0)
+    var id: Int = 0)
