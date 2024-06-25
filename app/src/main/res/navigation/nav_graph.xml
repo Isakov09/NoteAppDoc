@@ -11,10 +11,10 @@
         android:label="fragment_on_board"
         tools:layout="@layout/fragment_on_board" >
         <action
-            android:id="@+id/action_onBoardFragment_to_noteFragment"
-            app:destination="@id/noteFragment"
-            app:popUpTo="@id/noteFragment"
-            app:popUpToInclusive="true"/>
+            android:id="@+id/action_onBoardFragment_to_singUpFragment"
+            app:destination="@id/singUpFragment"
+            app:popUpTo="@id/onBoardFragment"
+            app:popUpToInclusive="true" />
 
     </fragment>
     <fragment
@@ -45,5 +45,16 @@
         <argument
             android:name="noteid"
             app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/singUpFragment"
+        android:name="com.example.noteappdoc.ui.fragments.singup.SingUpFragment"
+        android:label="fragment_sing_up"
+        tools:layout="@layout/fragment_sing_up" >
+        <action
+            android:id="@+id/action_singUpFragment_to_noteFragment"
+            app:destination="@id/noteFragment"
+            app:popUpTo="@id/singUpFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>
