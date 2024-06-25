@@ -1,5 +1,7 @@
 package com.example.noteappdoc.ui.adapters
 
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -11,8 +13,10 @@ import com.example.noteappdoc.databinding.NoteItemBinding
 class NoteAdapter : ListAdapter<NoteModels, NoteAdapter.ViewHolder>(DiffCallback()) {
     class ViewHolder(private val binding: NoteItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: NoteModels) {
-            binding.tvNote.text = item.title
-            binding.tvTitleNote.text = item.description
+            binding.itemTitle.text = item.title
+            binding.itemDescription.text = item.description
+            binding.mcPan.setCardBackgroundColor(ColorStateList.valueOf(Color.parseColor(item.color)))
+            binding.tvDataTime.text = item.data
         }
     }
 

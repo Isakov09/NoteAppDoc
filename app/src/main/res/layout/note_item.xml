@@ -2,39 +2,46 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginVertical="5dp"
-    android:background="@drawable/item"
-    android:padding="16dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="20dp"
+    android:orientation="vertical"
+    android:background="@drawable/item">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/tvNote"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tiltle"
-            android:textColor="@color/gray"
-            android:textSize="16sp" />
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mc_pan"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:cardCornerRadius="20dp">
 
         <TextView
-            android:id="@+id/tvTitleNote"
+            android:id="@+id/item_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/title"
-            android:textColor="@color/gray"
-            android:textSize="8sp" />
+            android:layout_margin="10dp"
+            android:layout_marginStart="20dp"
+            android:text="Нужно сделать"
+            android:textColor="@color/dark_gray" />
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/item_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Работы с проектом,сделать домашку,убраться и.."
+            android:textColor="@color/dark_gray" />
 
-    <TextView
-        android:id="@+id/tvDateTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end|center"
-        android:text="@string/_16_n_18_13"
-        android:textColor="@color/gray"
-        android:textSize="8sp" />
+        <TextView
+            android:id="@+id/tv_data_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:text="20:41"
+            android:textColor="@color/dark_gray"
+            android:textSize="12sp" />
+
+    </com.google.android.material.card.MaterialCardView>
 </FrameLayout>
