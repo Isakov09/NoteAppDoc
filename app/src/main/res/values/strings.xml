@@ -12,4 +12,6 @@
     <string name="title">title</string>
     <string name="_16_n_18_13">16 января \n 18:13</string>
     <string name="titlees">Начните ввод</string>
+    <string name="default_web_client_id">559205571343-s0agdaffeq5gtgaq4btgf72vie95r7j5.apps.googleusercontent.com</string>
+    <string name="Code">Регистация через Google</string>
 </resources>

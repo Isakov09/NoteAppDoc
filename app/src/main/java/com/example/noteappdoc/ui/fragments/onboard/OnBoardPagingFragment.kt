@@ -56,7 +56,7 @@ class OnBoardPagingFragment : Fragment() {
         preferenceHelper.unit(requireContext())
         btnStart.setOnClickListener {
             preferenceHelper.saveBoolean = true
-            findNavController().navigate(R.id.action_onBoardFragment_to_noteFragment)
+            findNavController().navigate(R.id.action_onBoardFragment_to_singUpFragment)
         }
     }
 
